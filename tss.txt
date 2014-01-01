@@ -1,0 +1,30 @@
+..F.F.F....
+
+Failures:
+
+  1) Static pages Contact page 
+     Failure/Error: it { should have_selector('title', text: full_title('Contact')) }
+       expected #has_selector?("title", {:text=>"Ruby on Rails Tutorial Sample App | Contact"}) to return true, got false
+     # ./spec/requests/static_pages_spec.rb:41:in `block (3 levels) in <top (required)>'
+
+  2) Static pages Help page 
+     Failure/Error: it { should have_selector('title', text: full_title('Help')) }
+       expected #has_selector?("title", {:text=>"Ruby on Rails Tutorial Sample App | Help"}) to return true, got false
+     # ./spec/requests/static_pages_spec.rb:27:in `block (3 levels) in <top (required)>'
+
+  3) Static pages About page 
+     Failure/Error: it { should have_selector('title', text: full_title('About Us')) }
+       expected #has_selector?("title", {:text=>"Ruby on Rails Tutorial Sample App | About Us"}) to return true, got false
+     # ./spec/requests/static_pages_spec.rb:34:in `block (3 levels) in <top (required)>'
+
+Finished in 0.38902 seconds
+11 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/requests/static_pages_spec.rb:41 # Static pages Contact page 
+rspec ./spec/requests/static_pages_spec.rb:27 # Static pages Help page 
+rspec ./spec/requests/static_pages_spec.rb:34 # Static pages About page 
+
+Randomized with seed 21694
+

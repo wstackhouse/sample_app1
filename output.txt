@@ -1,0 +1,46 @@
+....F.FF.FF..
+
+Failures:
+
+  1) Static pages Help page 
+     Failure/Error: it { should have_selector('title', text: full_title('Help')) }
+       expected #has_selector?("title", {:text=>"Ruby on Rails Tutorial Sample App | Help"}) to return true, got false
+     # ./spec/requests/static_pages_spec.rb:25:in `block (3 levels) in <top (required)>'
+
+  2) Static pages Contact page it should behave like all static pages 
+     Failure/Error: it { should have_selector('h1', text: heading) }
+       expected #has_selector?("h1", {:text=>"Sample App"}) to return true, got false
+     Shared Example Group: "all static pages" called from ./spec/requests/static_pages_spec.rb:42
+     # ./spec/requests/static_pages_spec.rb:8:in `block (3 levels) in <top (required)>'
+
+  3) Static pages Contact page it should behave like all static pages 
+     Failure/Error: it { should have_title(full_title(page_title)) }
+       expected #has_title?("Ruby on Rails Tutorial Sample App | | Contact") to return true, got false
+     Shared Example Group: "all static pages" called from ./spec/requests/static_pages_spec.rb:42
+     # ./spec/requests/static_pages_spec.rb:9:in `block (3 levels) in <top (required)>'
+
+  4) Static pages About page it should behave like all static pages 
+     Failure/Error: it { should have_selector('h1', text: heading) }
+       expected #has_selector?("h1", {:text=>"Sample App"}) to return true, got false
+     Shared Example Group: "all static pages" called from ./spec/requests/static_pages_spec.rb:33
+     # ./spec/requests/static_pages_spec.rb:8:in `block (3 levels) in <top (required)>'
+
+  5) Static pages About page it should behave like all static pages 
+     Failure/Error: it { should have_title(full_title(page_title)) }
+       expected #has_title?("Ruby on Rails Tutorial Sample App | | Aout") to return true, got false
+     Shared Example Group: "all static pages" called from ./spec/requests/static_pages_spec.rb:33
+     # ./spec/requests/static_pages_spec.rb:9:in `block (3 levels) in <top (required)>'
+
+Finished in 0.48603 seconds
+13 examples, 5 failures
+
+Failed examples:
+
+rspec ./spec/requests/static_pages_spec.rb:25 # Static pages Help page 
+rspec ./spec/requests/static_pages_spec.rb:8 # Static pages Contact page it should behave like all static pages 
+rspec ./spec/requests/static_pages_spec.rb:9 # Static pages Contact page it should behave like all static pages 
+rspec ./spec/requests/static_pages_spec.rb:8 # Static pages About page it should behave like all static pages 
+rspec ./spec/requests/static_pages_spec.rb:9 # Static pages About page it should behave like all static pages 
+
+Randomized with seed 34140
+
