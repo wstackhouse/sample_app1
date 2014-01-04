@@ -1,0 +1,28 @@
+Run options: include {:full_description=>/signup\ page/}
+FF..
+
+Failures:
+
+  1) User pages signup page with invalid information should not create a user
+     Failure/Error: expect { click_button submit }.not_to change(User, :count)
+     Capybara::ElementNotFound:
+       Unable to find button "Create my account"
+     # ./spec/requests/user_pages_spec.rb:29:in `block (5 levels) in <top (required)>'
+     # ./spec/requests/user_pages_spec.rb:29:in `block (4 levels) in <top (required)>'
+
+  2) User pages signup page with valid information should create a user
+     Failure/Error: fill_in "Name",         with: "Example User"
+     Capybara::ElementNotFound:
+       Unable to find field "Name"
+     # ./spec/requests/user_pages_spec.rb:35:in `block (4 levels) in <top (required)>'
+
+Finished in 0.40702 seconds
+4 examples, 2 failures
+
+Failed examples:
+
+rspec ./spec/requests/user_pages_spec.rb:28 # User pages signup page with invalid information should not create a user
+rspec ./spec/requests/user_pages_spec.rb:41 # User pages signup page with valid information should create a user
+
+Randomized with seed 8467
+
